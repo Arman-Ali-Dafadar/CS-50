@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Bookmarks{% endblock %}
+
+{% block main %}
+<div>
+    <h3>Search for millions of Books and Authors Here!!!</h3>
+    <form action="/search" method="post">
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <input autocomplete="on" autofocus class="form-control" name="query" placeholder="Search by Book title, author, genra or any keywords" type="text">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+    <div class="container mt-4">
+        <h3 class="mb-4">Your Bookmarked Books will be shown here</h3>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+            {% for book in books_info %}
+            <div class="col">
+                <div class="card h-100">
+                    {% if book.cover_src %}
+                    <img src="{{ book.cover_src }}" class="card-img-top" alt="{{ book.title }}">
+                    {% else %}
+                    <img src="/static/no_cover.png" class="card-img-top" alt="No cover">
+                    {% endif %}
+                    <div class="card-body">
+                        <h6 class="card-title">{{ book.title }}</h6>
+                        <form action="/delete" method="post">
+                            <input type="hidden" name="work_key" value="{{ book.work_key }}">
+                            <button class="btn btn-outline-danger btn-sm">Remove from Bookmarks</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
