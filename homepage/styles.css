@@ -1,0 +1,27 @@
+body
+{
+    background-color: #222222;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS", cursive;
+    text-align: left;
+}
+
+.header
+{
+    background-color: #0000A3;
+    padding: 3rem;
+    text-align: Center;
+}
+
+.intro
+{
+    padding: 6rem;
+}
+
+.btn
+{
+    display:block;
+}
+
+

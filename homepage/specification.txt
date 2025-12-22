@@ -1,0 +1,28 @@
+Html tags used:
+    1.<html>
+    2.<head>
+    3.<body>
+    4.<link>
+    5.<script>
+    6.<title>
+    7.<div>
+    8.<p>
+    9.<a>
+    10.<button>
+
+CSS Selectors used:
+    1.body
+    2..header
+    3..intro
+    4..btn
+
+CSS properties used:
+    1.background-color
+    2.color
+    3.font-size
+    4.font-family
+    5.text-align
+
+The Bootstrap feature i choose is the btn class which helped me easily style my buttons and the <a> tags.
+
+The script.js file consist of multiple functions used to calculate the no. of correct answers provided by the user and decides their appropriate rank and prints it on the Finalpage. I have used the localStorage method to store the correct value of result accross multiple pages.
